@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HACKER DETECTED/title>
 </head>
 <body>
   <pre>-- SCRIPT discord.gg/ZHBevg8FyR
