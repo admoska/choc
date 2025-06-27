@@ -3,6 +3,6 @@
 <head>
 </head>
 <body>
-  <pre> This is Orignal Har Script MENU Site</pre>
+  <pre> This is Original Har Script MENU Site</pre>
 </body>
 </html>
