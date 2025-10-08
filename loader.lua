@@ -140,4 +140,4 @@ end)
 
 
 
-loadstring(game:HttpGet('https://pastebin.com/raw/uVZKsm43'))()
+loadstring(game:HttpGet('https://pastebin.com/raw/J6HgUwhM'))()
